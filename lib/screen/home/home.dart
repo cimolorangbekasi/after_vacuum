@@ -14,17 +14,28 @@ class Home extends StatelessWidget {
 
     return Scaffold(
       body: ListView(
-        children: pelajaran2.map((e) {
-          return Card(
-            child: ListTile(
-                onTap: () {
-                  Get.to(() => Detail(pelajaran: e));
-                },
-                title: Text(e.name),
-                subtitle: Text('Pengajar: ${e.pengajar}'),
-                trailing: const Icon(Icons.more_vert)),
-          );
-        }).toList(),
+        children: [
+          const Text(
+            'Daftar Mata Kuliah t/a 2023-2024',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 30,
+            ),
+          ),
+          Column(
+            children: pelajaran2.map((e) {
+              return Card(
+                child: ListTile(
+                    onTap: () {
+                      Get.to(() => Detail(pelajaran: e));
+                    },
+                    title: Text(e.name),
+                    subtitle: Text('Pengajar: ${e.pengajar}'),
+                    trailing: const Icon(Icons.more_vert)),
+              );
+            }).toList(),
+          ),
+        ],
       ),
       // floatingActionButton: FloatingActionButton(
       //   backgroundColor: Colors.blue,
