@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_bla/controller/controller.dart';
 import 'package:getx_bla/global/kelas_pelajaran.dart';
+import 'package:getx_bla/screen/home/detail/detail.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -12,27 +13,18 @@ class Home extends StatelessWidget {
     TextEditingController inputan = TextEditingController();
 
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Obx(() {
-            return Text(_controller.name.value);
-          }),
-          const SizedBox(height: 50),
-          Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 10,
-            ),
-            child: TextField(
-              controller: inputan,
-              onSubmitted: (value) => _controller.fungsi(value),
-              decoration: InputDecoration(
-                labelText: 'katakan "cimol"',
-                border: OutlineInputBorder(),
-              ),
-            ),
-          ),
-        ],
+      body: ListView(
+        children: pelajaran2.map((e) {
+          return Card(
+            child: ListTile(
+                onTap: () {
+                  Get.to(() => Detail(pelajaran: e));
+                },
+                title: Text(e.name),
+                subtitle: Text('Pengajar: ${e.pengajar}'),
+                trailing: const Icon(Icons.more_vert)),
+          );
+        }).toList(),
       ),
       // floatingActionButton: FloatingActionButton(
       //   backgroundColor: Colors.blue,
