@@ -18,12 +18,17 @@ class Home extends StatelessWidget {
             return Text(_controller.name.value);
           }),
           const SizedBox(height: 50),
-          TextField(
-            controller: inputan,
-            onSubmitted: (value) => _controller.fungsi(value),
-            decoration: InputDecoration(
-              labelText: 'katakan "cimol"',
-              border: OutlineInputBorder(),
+          Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 10,
+            ),
+            child: TextField(
+              controller: inputan,
+              onSubmitted: (value) => _controller.fungsi(value),
+              decoration: InputDecoration(
+                labelText: 'katakan "cimol"',
+                border: OutlineInputBorder(),
+              ),
             ),
           ),
         ],
