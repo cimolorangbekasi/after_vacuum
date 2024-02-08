@@ -20,14 +20,7 @@ class Aplikasi extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ), // bisa juga ThemeData(appBarTheme: AppBarTheme(backgroundColor: Colors.blue))
-      // home: const Home(),
-      home: Detail(
-          pelajaran: Pelajaran(
-              id: 4,
-              name: 'nangis',
-              jumlahSKS: 5,
-              jumlahHalaman: 6723,
-              pengajar: 'Prabowo')),
+      home: const Home(),
     );
   }
 }
