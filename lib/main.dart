@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:getx_bla/screen/home/home.dart';
 
 // hahaha ane hapus semua
 
@@ -14,10 +15,9 @@ class Aplikasi extends StatelessWidget {
     return MaterialApp(
       title: 'Tes Flutter',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-          primarySwatch: Colors
-              .blue), // bisa juga ThemeData(appBarTheme: AppBarTheme(backgroundColor: Colors.blue))
-      home: Scaffold(body: Text('halo')),
+      theme: ThemeData(primarySwatch: Colors.blue),
+      // bisa juga ThemeData(appBarTheme: AppBarTheme(backgroundColor: Colors.blue))
+      home: const Home(),
     );
   }
 }
