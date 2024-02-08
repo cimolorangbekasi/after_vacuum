@@ -15,8 +15,8 @@ class Aplikasi extends StatelessWidget {
       title: 'Tes Flutter',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          primarySwatch: Colors
-              .blue), // bisa juga ThemeData(appBarTheme: AppBarTheme(backgroundColor: Colors.blue))
+        primarySwatch: Colors.blue,
+      ), // bisa juga ThemeData(appBarTheme: AppBarTheme(backgroundColor: Colors.blue))
       home: Scaffold(body: Text('halo')),
     );
   }
