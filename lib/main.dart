@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+
+import 'package:get/get.dart';
+
 import 'package:getx_bla/screen/home/home.dart';
 import 'package:getx_bla/screen/splash.dart';
 
@@ -13,7 +16,7 @@ class Aplikasi extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Tes Flutter',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
