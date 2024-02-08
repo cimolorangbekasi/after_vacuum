@@ -24,7 +24,12 @@ class Home extends StatelessWidget {
               return Card(
                 child: ListTile(
                     onTap: () {
-                      Get.to(() => Detail(pelajaran: e));
+                      Get.to(() => Detail(pelajaran: e, key: Get.key));
+                      // Navigator.push(
+                      //     context,
+                      //     MaterialPageRoute(
+                      //       builder: (context) => Detail(pelajaran: e),
+                      //     ));
                     },
                     title: Text(e.name),
                     subtitle: Text('Pengajar: ${e.pengajar}'),
