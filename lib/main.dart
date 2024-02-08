@@ -17,7 +17,7 @@ class Aplikasi extends StatelessWidget {
       theme: ThemeData(
           primarySwatch: Colors
               .blue), // bisa juga ThemeData(appBarTheme: AppBarTheme(backgroundColor: Colors.blue))
-      home: const Text('halo'),
+      home: Scaffold(body: Text('halo')),
     );
   }
 }
