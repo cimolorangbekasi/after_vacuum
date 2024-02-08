@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:getx_bla/controller/controller.dart';
 import 'package:getx_bla/global/kelas_pelajaran.dart';
 import 'package:getx_bla/screen/home/detail/detail.dart';
+import 'package:getx_bla/screen/home/profile/profile.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -14,7 +15,13 @@ class Home extends StatelessWidget {
     //
     return Scaffold(
       appBar: AppBar(
-        actions: [IconButton(onPressed: () {}, icon: Icon(Icons.person_pin))],
+        actions: [
+          IconButton(
+              onPressed: () {
+                Get.to(() => const Profile());
+              },
+              icon: const Icon(Icons.person_pin))
+        ],
       ),
       backgroundColor: const Color.fromARGB(255, 202, 197, 182),
       body: ListView(
