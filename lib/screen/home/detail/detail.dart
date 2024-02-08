@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:getx_bla/controller/controller.dart';
 import 'package:getx_bla/global/kelas_pelajaran.dart';
 import 'package:getx_bla/global/static_styles.dart';
 
@@ -9,6 +11,8 @@ class Detail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final _controller = Get.find<ListController>();
+
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 202, 197, 182),
       body: Padding(
@@ -50,7 +54,7 @@ class Detail extends StatelessWidget {
             ),
             const Spacer(),
             ElevatedButton(
-              onPressed: () => (),
+              onPressed: () => _controller.tambah(pelajaran),
               style: StaticStyles.buttonDark(),
               child: const Row(
                 mainAxisAlignment: MainAxisAlignment.center,

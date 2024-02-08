@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_bla/controller/controller.dart';
 import 'package:getx_bla/global/kelas_pelajaran.dart';
 import 'package:getx_bla/screen/home/detail/detail.dart';
 
@@ -8,8 +9,14 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_local_variable
+    final controller = Get.put(ListController());
     //
     return Scaffold(
+      appBar: AppBar(
+        actions: [IconButton(onPressed: () {}, icon: Icon(Icons.person_pin))],
+      ),
+      backgroundColor: const Color.fromARGB(255, 202, 197, 182),
       body: ListView(
         children: [
           const Text(

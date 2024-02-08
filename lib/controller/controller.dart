@@ -2,7 +2,7 @@ import 'package:get/get.dart';
 import 'package:getx_bla/global/kelas_pelajaran.dart';
 
 class ListController extends GetxController {
-  Rx<List<Pelajaran>> pelajaran2 = Rx<List<Pelajaran>>([]);
+  Rx<List<Pelajaran>> cart = Rx<List<Pelajaran>>([]);
   final name = ''.obs;
 
   void fungsi(String teks) {
@@ -10,6 +10,6 @@ class ListController extends GetxController {
   }
 
   void tambah(Pelajaran pelajaran) {
-    pelajaran2.value.add(pelajaran);
+    cart.value.add(pelajaran);
   }
 }
