@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:getx_bla/global/kelas_pelajaran.dart';
-import 'package:getx_bla/screen/home/detail/detail.dart';
 import 'package:getx_bla/screen/home/home.dart';
+import 'package:getx_bla/screen/splash.dart';
 
 // hahaha ane hapus semua
 
@@ -20,7 +19,15 @@ class Aplikasi extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ), // bisa juga ThemeData(appBarTheme: AppBarTheme(backgroundColor: Colors.blue))
-      home: const Home(),
+      home: FutureBuilder(
+        future: Future.delayed(const Duration(milliseconds: 800)),
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.done) {
+            return const Home();
+          }
+          return const Splash();
+        },
+      ),
     );
   }
 }
