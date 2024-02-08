@@ -8,6 +8,16 @@ class Detail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: Column(
+        children: [
+          SizedBox(height: MediaQuery.of(context).size.height / 4),
+          Text(pelajaran.name),
+          Text(pelajaran.pengajar),
+          Text(pelajaran.jumlahHalaman.toString()),
+          Text(pelajaran.jumlahSKS.toString()),
+        ],
+      ),
+    );
   }
 }
