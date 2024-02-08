@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_bla/controller/controller.dart';
 import 'package:getx_bla/global/kelas_pelajaran.dart';
 import 'package:getx_bla/screen/home/detail/detail.dart';
 
@@ -9,9 +8,7 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _controller = Get.put(ListController());
-    TextEditingController inputan = TextEditingController();
-
+    //
     return Scaffold(
       body: ListView(
         children: [

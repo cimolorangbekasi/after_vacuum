@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:getx_bla/global/kelas_pelajaran.dart';
-import 'package:getx_bla/screen/home/detail/detail.dart';
 import 'package:getx_bla/screen/home/home.dart';
 
 // hahaha ane hapus semua
