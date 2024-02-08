@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:getx_bla/screen/home/home.dart';
 
 // hahaha ane hapus semua
 
