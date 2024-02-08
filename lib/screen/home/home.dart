@@ -41,12 +41,6 @@ class Home extends StatelessWidget {
           ),
         ],
       ),
-      // floatingActionButton: FloatingActionButton(
-      //   backgroundColor: Colors.blue,
-      //   heroTag: 'grid',
-      //   onPressed: () => (),
-      //   child: const Icon(Icons.note_add, size: 34),
-      // ),
     );
   }
 }
